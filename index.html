@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffaf8">
+  <meta name="description" content="Notre site arrive bientôt. Nous préparons un espace à la hauteur de vos besoins.">
+  <title>Notre site arrive bientôt</title>
+  <style>
+    :root {
+      --ink: #243247;
+      --muted: #687487;
+      --pink: #dda09c;
+      --blue: #9bd9e8;
+      --paper: #fffaf8;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(221,160,156,.20), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(155,217,232,.25), transparent 30%),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .card {
+      position: relative;
+      width: min(100%, 760px);
+      padding: clamp(34px, 7vw, 76px) clamp(22px, 7vw, 72px);
+      text-align: center;
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(36,50,71,.07);
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(36,50,71,.08);
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 190px; height: 190px;
+      border: 1px solid rgba(155,217,232,.45);
+      border-radius: 50%;
+      top: -125px; right: -65px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 46px;
+      color: var(--ink);
+      font-size: .83rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .logo-mark {
+      width: 54px; height: 54px;
+      display: grid; place-items: center;
+      border: 1.5px dashed var(--pink);
+      border-radius: 17px;
+      color: #c98783;
+      font-size: 25px;
+      background: #fff8f7;
+    }
+    .eyebrow {
+      margin: 0 0 16px;
+      color: #b87976;
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: clamp(2.5rem, 7vw, 4.8rem);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+      font-weight: 780;
+    }
+    h1 span { color: #65b9cf; }
+    .intro {
+      max-width: 470px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.13rem);
+      line-height: 1.8;
+    }
+    .services {
+      margin: 26px 0 30px;
+      color: #566478;
+      font-size: .86rem;
+      line-height: 1.8;
+    }
+    .progress {
+      width: min(100%, 260px);
+      height: 5px;
+      margin: 0 auto 30px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #f1e8e6;
+    }
+    .progress span {
+      display: block;
+      width: 64%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--pink), var(--blue));
+    }
+    .note {
+      margin: 0;
+      color: #8a94a2;
+      font-size: .82rem;
+    }
+    .dots { color: #d69a96; letter-spacing: .28em; margin-bottom: 10px; }
+    @media (max-width: 480px) {
+      body { padding: 14px; }
+      .card { border-radius: 22px; }
+      .logo { margin-bottom: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <!-- LOGO : remplacez ce bloc par <img src="logo.png" alt="Nom de l'entreprise" class="logo-image"> si vous ajoutez le logo -->
+    <div class="logo" aria-label="Emplacement du logo">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span>Votre logo</span>
+    </div>
+
+    <p class="eyebrow">Un nouvel espace se prépare</p>
+    <h1>Notre site arrive <span>bientôt.</span></h1>
+    <p class="intro">Nous préparons un espace à la hauteur de vos besoins. Retrouvez très bientôt tous nos services et nos informations.</p>
+    <p class="services">Services à domicile <span aria-hidden="true">·</span> Accompagnement <span aria-hidden="true">·</span> Assistance</p>
+    <div class="progress" aria-label="Site en préparation"><span></span></div>
+    <div class="dots" aria-hidden="true">•••</div>
+    <p class="note">Merci pour votre patience et votre confiance.</p>
+  </main>
+</body>
+</html>
